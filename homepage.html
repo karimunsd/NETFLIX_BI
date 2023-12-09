@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #c72d2d;
+        }
+
+        header {
+            padding: 20px;
+            background-color: #111;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .cta {
+            margin-top: 20px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #e50914;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        .featured {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .featured img {
+            width: 100%;
+            max-width: 200px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .featured img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .modal-content {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 20px;
+        }
+        .sign-up-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sign-up-form input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .sign-up-form button {
+            padding: 10px 20px;
+            background-color: #e50914;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>NETFLIX</h1>
+        </div>
+    </header>
+    <div class="main-content">
+        <h2>Watch your favorite movies and series anytime, anywhere.</h2>
+        <div class="cta">
+            <a href="#" onclick="openModal('signInModal')">Sign In</a>
+            <a href="#" onclick="openModal('signUpModal')">Sign Up</a>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Featured Content</h2>
+        <div class="featured">
+            <img src="C:\Users\karim\OneDrive\Desktop\animal.jpg" alt="Movie 1">
+            <img src="C:\Users\karim\OneDrive\Desktop\dear.jpg" alt="Movie 2">
+            <img src="C:\Users\karim\OneDrive\Desktop\goblin.jpg" alt="TV Show 1" alt="TV Show 1">
+            <img src="C:\Users\karim\OneDrive\Desktop\tale.jpg" alt="TV Show 2" alt="TV Show 2">
+        </div>
+    </div>
+    <div class="modal" id="signInModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signInModal')">&times;</span>
+            <h2>Sign In</h2>
+        </div>
+    </div>
+    <div class="modal" id="signUpModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signUpModal')">&times;</span>
+            <h2>Sign Up</h2>
+            <form class="sign-up-form">
+                <input type="text" placeholder="User Name">
+                <input type="text" placeholder="Date of Birth">
+                <input type="email" placeholder="Email">
+                <input type="tel" placeholder="Mobile Number">
+                <button onclick="openModal('otpModal')">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="otpModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('otpModal')">&times;</span>
+            <h2>Enter OTP</h2>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
+</body>
+</html>
