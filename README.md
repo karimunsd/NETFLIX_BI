@@ -1,4 +1,9 @@
 [Netflix-like Webpage]
+
+
+
+
+
 This repository contains an HTML file representing a webpage with a Netflix-like interface. The webpage aims to showcase featured movies and series while providing modal pop-ups for signing in, signing up, and entering an OTP for account verification.
 
 File Structure
